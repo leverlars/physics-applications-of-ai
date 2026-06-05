@@ -1,0 +1,28 @@
+[project]
+name = "physics-applications-of-ai"
+version = "0.1.0"
+description = "Jet tagging project for binary, multiclass, and momentum-decorrelated classification of ATLAS-like jet data."
+readme = "README.md"
+requires-python = ">=3.10,<3.13"
+dependencies = [
+    "h5py>=3.11",
+    "matplotlib>=3.8",
+    "notebook>=7.2",
+    "numpy>=1.26",
+    "pandas>=2.2",
+    "requests>=2.32",
+    "scikit-learn>=1.5",
+    "tables>=3.9",
+    "torch>=2.3",
+    "tqdm>=4.66",
+]
+
+[dependency-groups]
+dev = [
+    "pytest>=8.2",
+    "ruff>=0.5",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
