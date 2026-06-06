@@ -31,16 +31,31 @@ The repository already includes the resulting top-level `pyproject.toml`, so a f
 uv sync
 ```
 
-For convenience, the repository also includes a startup script that synchronizes the environment and opens the assignment notebook:
+For convenience, the repository also includes a startup script that synchronizes the environment and opens the solution notebook:
 
 ```bash
 ./startup.sh
 ```
 
+
+## Notebooks
+
+- `instructions.ipynb` is kept as the original assignment handout.
+- `solution.ipynb` contains the implemented task workflow and should be used for running the project solution.
+
+## Data
+
+Data files are downloaded on demand from the assignment URL when the loaders in `src/physics_applications_of_ai/data.py` do not find the expected HDF5 files under `data/`. The downloaded archive is cached under `.cache/`, and both `.cache/` and `data/` are intentionally ignored by git.
+
+The tracked source code is enough to reproduce the data download; local zip archives such as `jettagging.zip` are not required.
+
 ## Useful commands
 
 ```bash
-# Start the instructions notebook.
+# Start the solution notebook.
+uv run jupyter notebook solution.ipynb
+
+# Open the original assignment handout.
 uv run jupyter notebook instructions.ipynb
 
 # Run tests once project tests are added.
@@ -60,5 +75,5 @@ The main dependencies support the assignment workflow:
 - `matplotlib` supports exploratory plots and result figures.
 - `torch` supports neural-network training for binary, multiclass, and decorrelation tasks.
 - `scikit-learn` supports metrics, splitting, baselines, and preprocessing.
-- `notebook` runs `instructions.ipynb` interactively.
+- `notebook` runs `solution.ipynb` and `instructions.ipynb` interactively.
 - `tqdm` provides progress bars for data preparation and training loops.

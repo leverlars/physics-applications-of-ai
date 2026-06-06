@@ -2,4 +2,4 @@
 set -euo pipefail
 
 uv sync
-uv run jupyter notebook instructions.ipynb
+uv run jupyter notebook solution.ipynb

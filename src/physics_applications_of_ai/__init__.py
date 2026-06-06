@@ -1,2 +1,1 @@
-def hello() -> str:
-    return "Hello from physics-applications-of-ai!"
+"""Utilities for the Physics Applications of AI jet-tagging assignment."""
