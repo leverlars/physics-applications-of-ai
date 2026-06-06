@@ -31,6 +31,12 @@ The repository already includes the resulting top-level `pyproject.toml`, so a f
 uv sync
 ```
 
+For convenience, the repository also includes a startup script that synchronizes the environment and opens the assignment notebook:
+
+```bash
+./startup.sh
+```
+
 ## Useful commands
 
 ```bash
