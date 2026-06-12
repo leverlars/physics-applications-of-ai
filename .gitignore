@@ -6,3 +6,4 @@ __pycache__/
 .ruff_cache/
 jettagging.zip
 .ipynb_checkpoints/
+outputs/
